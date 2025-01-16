@@ -32,8 +32,7 @@ st.pyplot(fig_norm)
 母数（パラメータ）を変化させたときのグラフの変化の確認 
 '''
 ## 期待値と分散を指定 
-lam = st.sidebar.slider('ポアソン分布の期待値
-', min_value=0, max_value=30, step=1) 
+lam = st.sidebar.slider('ポアソン分布の期待値', min_value=0, max_value=30, step=1) 
  
 ## ポアソン分布の描画 
 x_2 = np.linspace(0, 30, 31) 
@@ -58,10 +57,8 @@ S0 = 999                    # 感受性者数_初期値
 I0 = 1                      # 感染者数_初期値 
 R0 = 0                      # 免疫保持者数_初期値 
  
-r = st.sidebar.slider('基本再生産数
-', min_value=1.0, max_value=10.0, step=0.01) 
-gamma = 1 / st.sidebar.slider('回復率（回復までの日数）
-', min_value=1, max_value=20, step=1) 
+r = st.sidebar.slider('基本再生産数', min_value=1.0, max_value=10.0, step=0.01) 
+gamma = 1 / st.sidebar.slider('回復率（回復までの日数）', min_value=1, max_value=20, step=1) 
  
 #r = 2.5                     # 基本再生産数 
 #gamma = 1/10                # 回復率（1/10: 10日で回復） 
