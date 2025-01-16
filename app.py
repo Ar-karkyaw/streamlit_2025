@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import scipy as sp
 from scipy import stats
 from scipy.integrate import solve_ivp
 import matplotlib.pyplot as plt
@@ -36,7 +37,7 @@ lam = st.sidebar.slider('ポアソン分布の期待値', min_value=0, max_value
  
 ## ポアソン分布の描画 
 x_2 = np.linspace(0, 30, 31) 
-r = st.stats.poisson.pmf(x_2, lam) 
+r = sp.stats.poisson.pmf(x_2, lam) 
 fig_pois, ax2 = plt.subplots() 
 ax2.bar(x_2, height=r, color='#00A968', label='poisson')
 ax2.legend() 
